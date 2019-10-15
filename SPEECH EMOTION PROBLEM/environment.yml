@@ -274,14 +274,18 @@ dependencies:
   - pip:
     - absl-py==0.8.1
     - astor==0.8.0
+    - audioread==2.1.8
     - gast==0.2.2
     - google-pasta==0.1.7
     - grpcio==1.24.1
     - keras-applications==1.0.8
     - keras-preprocessing==1.1.0
+    - librosa==0.7.1
     - markdown==3.1.1
     - opt-einsum==3.1.0
     - protobuf==3.10.0
+    - resampy==0.2.2
+    - soundfile==0.10.2
     - tensorboard==2.0.0
     - tensorflow==2.0.0
     - tensorflow-estimator==2.0.0
