@@ -1,4 +1,10 @@
 =================
+REQUIREMENTS
+=================
+
+Docker should be installed.
+
+=================
 HOW TO RUN:
 =================
 
@@ -7,9 +13,11 @@ From terminal, run:
 `cd SPEECH\ EMOTION\ PROBLEM/`
 `./setup.sh <path/to/test/data>`
 
-(Note: 
+Notes: 
 1. the python function is inside context subdirectory AND setup.sh will take care of running it on the docker instance.
-2. The output will be found after the script finishes executing in the current directory
+2. DONT keyboard interrupt, the script takes some time to execute, let it finish till you can access shell again.
+3. The output will be found after the script finishes executing in the current directory
+4. Sometimes it takes some time after displaying "Installation finished". It does not mean it is completed, wait for some time till shell is avaliable again.
 
 =================
 FILE STRUCTURE:
@@ -25,6 +33,5 @@ FILE STRUCTURE:
 
 	/context/model/mean.npy: mean of training data
 	/context/model/std.npy: std of training data
-	/context/model/model.h5: tensorflow keras model
 
 /setup.sh: this script creates a docker image, creates container of that image, and runs the function /contex/output.py on the container to generate a file 'output.txt' which is then sent back to the host from the container.
