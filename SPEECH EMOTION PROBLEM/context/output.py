@@ -1,3 +1,4 @@
+# Imports
 import os
 import tqdm
 import shutil
@@ -57,17 +58,20 @@ for root, subdirs, files in os.walk(test_path_opensmile):
     
 X_test = np.array(X_test)
 
+# Zero center and normalize by subracting and dividing by the mean and std respectively of the training data
 train_mean = np.load("mean.npy")
 train_std = np.load("std.npy")
 
 X_test -= train_mean
 X_test = np.divide(X_test, train_std, out=np.zeros_like(X_test), where=train_std!=0)
 
-
+# Load tf keras model
 model = load_model("model.h5")
 
+# Make predictinos
 y_test = np.argmax(model.predict(X_test), axis=1)
 
+# Save predictions
 f = open("output.txt", "w")
 f.write("File name, prediction\n\n")
 
