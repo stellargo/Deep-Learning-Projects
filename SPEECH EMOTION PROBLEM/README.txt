@@ -14,7 +14,7 @@ From terminal, run:
 `./setup.sh <path/to/test/data>`
 
 Notes: 
-1. the python function is inside context subdirectory AND setup.sh will take care of running it on the docker instance.
+1. NO NEED to run output.py; setup.sh will take care of running it on the docker instance.
 2. DONT keyboard interrupt, the script takes some time to execute, let it finish till you can access shell again.
 3. The output will be found after the script finishes executing in the current directory
 4. Sometimes it takes some time after displaying "Installation finished". It does not mean it is completed, wait for some time till shell is avaliable again.
