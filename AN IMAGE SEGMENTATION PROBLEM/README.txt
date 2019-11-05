@@ -1,0 +1,1 @@
+This folder contains the notebook for the image segmentation problem.
